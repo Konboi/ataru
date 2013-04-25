@@ -8,6 +8,10 @@ Ataru is command generate lucky number
 
 ## Create
 
-> bundle exec thor ataru loto6
+```ruby
+ bundle exec thor ataru loto6
+```
 
-> bundle exec thor ataru num4
+```ruby
+ bundle exec thor ataru num4
+```
