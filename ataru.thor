@@ -36,6 +36,6 @@ class Ataru < Thor
     day = Time.now.strftime("%m月%d日")
     content = type + day + ": " + content
     
-    ImKayac.to('Konboi').post(content)    
+    ImKayac.to("USERNAME").post(content)    
   end
 end
