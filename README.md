@@ -1,6 +1,8 @@
 # Ataru
 
 Ataru is command generate lucky number
+Ataru using [im-kayac](http://im.kayac.com/) for notification.
+im-kayac is free notification servise
 
 ## Install
 
