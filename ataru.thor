@@ -4,13 +4,13 @@ require 'securerandom'
 
 class Ataru < Thor
   
-  desc 'num4', "ナンバーズ4の数字を自動的に生成してくれるコマンド"
+  desc 'num4', "ナンバーズ4の数字を生成"
   def num4
     lucky_number = SecureRandom.random_number(9999)
     imPost(lucky_number.to_s, 'num4')
   end
 
-  desc 'loto6', "ロト6の数字を自動的に生成してくれるコマンド"
+  desc 'loto6', "ロト6の数字を生成"
   def loto6
     lucky_numbers = []
 
@@ -22,7 +22,7 @@ class Ataru < Thor
       lucky_numbers.push(lucky_number)
     end
 
-    imPost(lucky_numbers.to_s, 'loto6')
+    imPost(lucky_numbers.sort.to_s, 'loto6')
   end
   
   private
@@ -36,6 +36,6 @@ class Ataru < Thor
     day = Time.now.strftime("%m月%d日")
     content = type + day + ": " + content
     
-    ImKayac.to("USERNAME").post(content)    
+    ImKayac.to('Konboi').post(content)    
   end
 end
